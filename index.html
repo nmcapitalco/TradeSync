@@ -1012,9 +1012,7 @@ document.getElementById('form-btn').addEventListener('click', async function(e){
       body: JSON.stringify(data)
     });
     if(res.ok){
-      document.getElementById('form-success').style.display = 'block';
-      document.getElementById('form-error').style.display = 'none';
-      btn.style.display = 'none';
+      window.location.href = 'https://tradesync.markets/thankyou.html';
     } else {
       throw new Error('failed');
     }
