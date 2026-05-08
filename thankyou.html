@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO — noindex thank-you page, it's not a landing page -->
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="canonical" href="https://tradesync.markets/thankyou.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://tradesync.markets/thankyou.html"/>
+  <meta property="og:title" content="You're All Set — TradeSync"/>
+  <meta property="og:description" content="Your message was received. Here's exactly what to do next to get TradeSync running in your account."/>
+  <meta property="og:site_name" content="TradeSync"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23059669'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' font-family='sans-serif' font-weight='bold' fill='white'>T</text></svg>"/>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>You're All Set — TradeSync</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#F7F8FA;--white:#FFFFFF;--dark:#0F1623;--mid:#475569;--light:#94A3B8;
+  --border:#E2E8F0;--green:#059669;--green-dark:#047857;--green-bg:rgba(5,150,105,0.08);
+  --green-mid:rgba(5,150,105,0.25);--shadow-sm:0 1px 3px rgba(15,22,35,0.06);
+  --shadow-md:0 4px 16px rgba(15,22,35,0.08);--shadow-lg:0 12px 40px rgba(15,22,35,0.10);
+  --radius:12px;--radius-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--dark);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.6;min-height:100vh;}
+
+/* NAV */
+nav{padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(247,248,250,0.97);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--dark);text-decoration:none;}
+.nav-logo span{color:var(--green);}
+.nav-back{font-size:13px;color:var(--mid);text-decoration:none;font-weight:500;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.nav-back:hover{color:var(--dark);}
+@media(max-width:600px){nav{padding:0 20px;}}
+
+/* HERO CONFIRM */
+.confirm{background:linear-gradient(135deg,#fff 0%,#F0FDF4 60%,#DCFCE7 100%);padding:80px 32px 60px;text-align:center;position:relative;overflow:hidden;}
+.confirm::before{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;background:radial-gradient(circle,rgba(5,150,105,0.07) 0%,transparent 70%);pointer-events:none;}
+.confirm::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(5,150,105,0.05) 0%,transparent 70%);pointer-events:none;}
+.check-wrap{position:relative;z-index:1;width:80px;height:80px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;box-shadow:0 8px 32px rgba(5,150,105,0.35);animation:popIn 0.5s cubic-bezier(0.175,0.885,0.32,1.275) both;}
+@keyframes popIn{0%{opacity:0;transform:scale(0.5);}100%{opacity:1;transform:scale(1);}}
+.check-icon{font-size:36px;color:#fff;line-height:1;}
+.confirm-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-bg);border:1px solid var(--green-mid);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:20px;font-family:'DM Mono',monospace;}
+.confirm h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,76px);letter-spacing:1.5px;line-height:0.95;color:var(--dark);margin-bottom:20px;position:relative;z-index:1;}
+.confirm h1 em{font-style:normal;color:var(--green);}
+.confirm-sub{font-size:18px;color:var(--mid);max-width:500px;margin:0 auto 40px;line-height:1.75;position:relative;z-index:1;}
+.confirm-sub strong{color:var(--dark);font-weight:600;}
+.confirm-time{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:100px;padding:8px 20px;font-size:13px;color:var(--mid);font-weight:500;box-shadow:var(--shadow-sm);position:relative;z-index:1;}
+.confirm-time::before{content:'';width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.6);}}
+
+/* WHAT HAPPENS NEXT */
+.next{background:#fff;border-top:1px solid var(--border);padding:80px 32px;}
+.next-inner{max-width:860px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:14px;font-family:'DM Mono',monospace;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,50px);letter-spacing:1px;line-height:1.05;margin-bottom:48px;color:var(--dark);}
+.steps-list{display:flex;flex-direction:column;gap:4px;}
+.step-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;display:grid;grid-template-columns:56px 1fr;gap:20px;align-items:start;transition:all 0.2s;animation:fadeUp 0.5s ease forwards;}
+.step-item:hover{border-color:var(--green-mid);box-shadow:var(--shadow-md);background:#fff;}
+.step-item:nth-child(1){animation-delay:0.1s;}
+.step-item:nth-child(2){animation-delay:0.2s;}
+.step-item:nth-child(3){animation-delay:0.3s;}
+.step-item:nth-child(4){animation-delay:0.4s;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+/* Only animate if JS is available and browser supports it */
+@media (prefers-reduced-motion: no-preference) {
+  .step-item,.relief-card,.ql-card { animation-play-state: running; }
+}
+.step-num{width:44px;height:44px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(5,150,105,0.3);}
+.step-body h3{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:6px;line-height:1.3;}
+.step-body p{font-size:14px;color:var(--mid);line-height:1.7;}
+.step-body p strong{color:var(--dark);font-weight:600;}
+.step-tag{display:inline-flex;align-items:center;gap:6px;background:var(--green-bg);border:1px solid var(--green-mid);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--green);font-weight:700;letter-spacing:0.5px;font-family:'DM Mono',monospace;margin-top:10px;}
+.step-tag-amber{background:rgba(217,119,6,0.08);border-color:rgba(217,119,6,0.25);color:#D97706;}
+@media(max-width:600px){.step-item{grid-template-columns:44px 1fr;gap:14px;padding:20px 20px;} .next{padding:60px 20px;}}
+
+/* RELIEF SECTION */
+.relief{background:var(--bg);border-top:1px solid var(--border);padding:80px 32px;}
+.relief-inner{max-width:860px;margin:0 auto;}
+.relief-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:48px;}
+.relief-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;text-align:center;transition:all 0.2s;animation:fadeUp 0.5s ease forwards;}
+.relief-card:hover{box-shadow:var(--shadow-md);border-color:var(--green-mid);transform:translateY(-2px);}
+.relief-card:nth-child(1){animation-delay:0.1s;}
+.relief-card:nth-child(2){animation-delay:0.2s;}
+.relief-card:nth-child(3){animation-delay:0.3s;}
+.relief-icon{font-size:36px;margin-bottom:16px;display:block;}
+.relief-card h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.5px;color:var(--dark);margin-bottom:10px;}
+.relief-card p{font-size:14px;color:var(--mid);line-height:1.65;}
+.relief-card p strong{color:var(--dark);font-weight:600;}
+@media(max-width:700px){.relief-grid{grid-template-columns:1fr;} .relief{padding:60px 20px;}}
+
+/* QUICK LINKS */
+.quicklinks{background:#fff;border-top:1px solid var(--border);padding:80px 32px;}
+.ql-inner{max-width:860px;margin:0 auto;}
+.ql-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;}
+.ql-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:20px;text-decoration:none;transition:all 0.2s;animation:fadeUp 0.5s ease forwards;}
+.ql-card:hover{border-color:var(--green-mid);box-shadow:var(--shadow-md);background:#fff;transform:translateX(4px);}
+.ql-card:nth-child(1){animation-delay:0.1s;}
+.ql-card:nth-child(2){animation-delay:0.15s;}
+.ql-card:nth-child(3){animation-delay:0.2s;}
+.ql-card:nth-child(4){animation-delay:0.25s;}
+.ql-icon{width:44px;height:44px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.ql-text-title{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:3px;}
+.ql-text-sub{font-size:13px;color:var(--light);}
+.ql-arrow{margin-left:auto;color:var(--green);font-size:18px;flex-shrink:0;}
+@media(max-width:700px){.ql-grid{grid-template-columns:1fr;} .quicklinks{padding:60px 20px;}}
+
+/* CTA BOTTOM */
+.cta-bottom{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);padding:80px 32px;text-align:center;}
+.cta-bottom h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5vw,62px);letter-spacing:1.5px;color:#fff;margin-bottom:16px;line-height:1;}
+.cta-bottom p{font-size:17px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto 36px;line-height:1.7;}
+.cta-bottom a{display:inline-block;background:#fff;color:var(--green);padding:16px 40px;border-radius:9px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.15);transition:all 0.2s;}
+.cta-bottom a:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.2);}
+@media(max-width:600px){.cta-bottom{padding:60px 20px;}}
+
+/* FOOTER */
+footer{background:#064E3B;border-top:1px solid rgba(255,255,255,0.08);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#fff;}
+.footer-brand span{color:var(--green);}
+.footer-note{font-size:12px;color:rgba(255,255,255,0.3);}
+@media(max-width:600px){footer{padding:24px 20px;flex-direction:column;text-align:center;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://tradesync.markets" class="nav-logo">TRADE<span>SYNC</span></a>
+  <a href="https://tradesync.markets" class="nav-back">← Back to site</a>
+</nav>
+
+<!-- CONFIRM HERO -->
+<div class="confirm">
+  <div class="confirm-badge">Message Received</div>
+  <div class="check-wrap"><div class="check-icon">✓</div></div>
+  <h1>You're All<br/><em>Set.</em></h1>
+  <p class="confirm-sub">We got your message and will respond personally within 24 hours. <strong>In the meantime, here's exactly what to do next</strong> so you're ready to start copying the moment you hear back.</p>
+  <div class="confirm-time">Typical response time: under 24 hours · English & Spanish</div>
+</div>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next">
+  <div class="next-inner">
+    <div class="section-label">What To Do Right Now</div>
+    <div class="section-title">Three Steps While You Wait</div>
+    <div class="steps-list">
+
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Create a free Collective2 account</h3>
+          <p>Collective2 is the platform that connects TradeSync's trades to your brokerage account. Creating an account is completely free — no credit card required. Go to <strong>collective2.com</strong>, click Sign Up, and use your email. Takes about 2 minutes. Once you have an account, find <strong>TradeSync</strong> in the strategy search and click Subscribe to activate your $49/month access.</p>
+          <a href="https://collective2.com/details/155893301" target="_blank" class="step-tag">Subscribe to TradeSync on Collective2 →</a>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Open your brokerage account — pick the right one for you</h3>
+          <p>Your money stays in your own brokerage account at all times — TradeSync never touches it. You just need a compatible account connected to Collective2. <strong>If you're in the US:</strong> open Tradier — it's free, takes 10 minutes, and has zero commissions. <strong>If you're in Mexico:</strong> open an Interactive Brokers Pro account — they accept Mexican clients and have no monthly account fee, just small per-trade costs. Not sure which? We'll tell you exactly which one fits your situation when we reply.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+            <a href="https://tradier.com/individual/sign-up" target="_blank" class="step-tag">Open Tradier (US) →</a>
+            <a href="https://www.interactivebrokers.com/en/accounts/individual.php" target="_blank" class="step-tag">Open IBKR Pro (Mexico / International) →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Fund your brokerage account</h3>
+          <p>Once your brokerage account is approved — usually the same day for Tradier, 1–2 days for IBKR — transfer funds via bank ACH. <strong>We recommend a minimum of $10,000</strong> so your account can mirror TradeSync's position sizes proportionally. You can start with less, but larger accounts execute more cleanly. The transfer is free and takes 1–3 business days to settle.</p>
+          <div class="step-tag step-tag-amber">⏱ Takes 1–3 business days to fund — start now</div>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Connect and activate AutoTrade — then you're done forever</h3>
+          <p>Once your brokerage is funded, go back to your Collective2 account, open the TradeSync strategy page, and click <strong>"AutoTrade this strategy."</strong> Select your broker, authorize the connection, set your scaling to <strong>1.0</strong>, and click Activate. From that moment forward, every TradeSync trade executes automatically in your account. <strong>You never have to do anything again.</strong> Our full step-by-step guide walks you through every single click.</p>
+          <a href="https://tradesync.markets/#setup" class="step-tag">View Full Setup Guide →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELIEF SECTION -->
+<section class="relief">
+  <div class="relief-inner">
+    <div class="section-label">What To Expect</div>
+    <div class="section-title">Here's What Copy Trading<br/>Actually Feels Like</div>
+    <div class="relief-grid">
+
+      <div class="relief-card">
+        <span class="relief-icon">📱</span>
+        <h3>You Get an Email When a Trade Fires</h3>
+        <p>Every time TradeSync places a trade, Collective2 sends you an email notification. You'll see exactly what was bought or sold, at what price, and in what size — <strong>after it's already executed in your account automatically.</strong> No action needed from you.</p>
+      </div>
+
+      <div class="relief-card">
+        <span class="relief-icon">🔁</span>
+        <h3>Trades Are Proportional To Your Balance</h3>
+        <p>If TradeSync puts 8% of its model portfolio into a trade, Collective2 puts 8% of your account into the same trade. <strong>Your account size determines your position size — not ours.</strong> You stay in full control of how much of your account is used via the scaling factor.</p>
+      </div>
+
+      <div class="relief-card">
+        <span class="relief-icon">🏦</span>
+        <h3>Your Money Never Leaves Your Account</h3>
+        <p>TradeSync and Collective2 <strong>cannot withdraw funds, move money, or access your cash.</strong> They only send trade signals. Your brokerage holds everything. You can log in, check your balance, and withdraw anytime — completely independent of TradeSync.</p>
+      </div>
+
+      <div class="relief-card">
+        <span class="relief-icon">📅</span>
+        <h3>Trades Are Infrequent — That's By Design</h3>
+        <p>TradeSync is a <strong>swing trading strategy, not a day trading strategy.</strong> Trades happen when the right setup appears — not on a fixed schedule. Some weeks may have multiple trades. Some may have none. This is normal, expected, and intentional. Quality over quantity.</p>
+      </div>
+
+      <div class="relief-card">
+        <span class="relief-icon">🛑</span>
+        <h3>Cancel Anytime — No Commitment</h3>
+        <p>If you ever want to stop, log into Collective2 and cancel your subscription. <strong>AutoTrade stops immediately.</strong> Any open positions in your brokerage stay open — you can close them manually or hold them. No penalty. No lock-in. No questions asked.</p>
+      </div>
+
+      <div class="relief-card">
+        <span class="relief-icon">✉️</span>
+        <h3>We're Here If You Have Questions</h3>
+        <p>We'll respond to your message within 24 hours in English or Spanish. If you get stuck anywhere in setup, <strong>email nmcapitalco@gmail.com</strong> and we'll walk you through it personally. No bots — real replies from the people behind TradeSync.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="quicklinks">
+  <div class="ql-inner">
+    <div class="section-label">Useful Links</div>
+    <div class="section-title">Everything You Need — Right Here</div>
+    <div class="ql-grid">
+
+      <a href="https://collective2.com/details/155893301" target="_blank" class="ql-card">
+        <div class="ql-icon">📡</div>
+        <div>
+          <div class="ql-text-title">TradeSync on Collective2</div>
+          <div class="ql-text-sub">Subscribe to the strategy</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+      <a href="https://tradier.com/individual/sign-up" target="_blank" class="ql-card">
+        <div class="ql-icon">🇺🇸</div>
+        <div>
+          <div class="ql-text-title">Open Tradier (US)</div>
+          <div class="ql-text-sub">Best for US subscribers — $0 commissions</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+      <a href="https://www.interactivebrokers.com/en/accounts/individual.php" target="_blank" class="ql-card">
+        <div class="ql-icon">🌎</div>
+        <div>
+          <div class="ql-text-title">Open IBKR Pro (International)</div>
+          <div class="ql-text-sub">Best for Mexico — no monthly account fee</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+      <a href="https://tradesync.markets/#setup" class="ql-card">
+        <div class="ql-icon">📋</div>
+        <div>
+          <div class="ql-text-title">Full Setup Guide</div>
+          <div class="ql-text-sub">Step-by-step — every click explained</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+      <a href="https://tradesync.markets/#faq" class="ql-card">
+        <div class="ql-icon">💬</div>
+        <div>
+          <div class="ql-text-title">FAQ</div>
+          <div class="ql-text-sub">Common questions answered</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+      <a href="https://tradesync.markets/#brokers" class="ql-card">
+        <div class="ql-icon">🏦</div>
+        <div>
+          <div class="ql-text-title">Compare All Brokers</div>
+          <div class="ql-text-sub">US and international options</div>
+        </div>
+        <div class="ql-arrow">→</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<div class="cta-bottom">
+  <h2>Ready To Start<br/>Copying?</h2>
+  <p>Subscribe to TradeSync on Collective2 and you'll be set up and live before your next check-in.</p>
+  <a href="https://collective2.com/details/155893301" target="_blank">Subscribe on Collective2 →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">TRADE<span>SYNC</span></div>
+  <div class="footer-note">nmcapitalco@gmail.com · All trading involves risk of loss.</div>
+</footer>
+
+</body>
+</html>
