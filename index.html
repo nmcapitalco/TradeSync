@@ -78,13 +78,13 @@ span[data-es]{display:none;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(247,248,250,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--dark);text-decoration:none;flex-shrink:0;}
 .nav-logo span{color:var(--green);}
-.nav-links{display:flex;gap:2px;list-style:none;align-items:center;flex:1;justify-content:center;}
-.nav-links a{color:var(--mid);text-decoration:none;font-size:13px;font-weight:500;padding:6px 9px;border-radius:6px;transition:all 0.2s;white-space:nowrap;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;flex:1;justify-content:center;}
+.nav-links a{color:var(--mid);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:6px;transition:all 0.2s;white-space:nowrap;letter-spacing:0.1px;}
 .nav-links a:hover{color:var(--dark);background:var(--bg3);}
 .nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .nav-cta{background:var(--green)!important;color:#fff!important;padding:9px 18px!important;border-radius:8px!important;font-weight:600!important;font-size:13px!important;box-shadow:0 2px 8px rgba(5,150,105,0.3);white-space:nowrap;}
 .nav-cta:hover{background:var(--green-dark)!important;color:#fff!important;}
-@media(max-width:1100px){.nav-links a{font-size:12px;padding:6px 7px;}}
+@media(max-width:1200px){.nav-links a{font-size:13px;padding:8px 11px;}} @media(max-width:1050px){.nav-links a{font-size:12px;padding:7px 9px;}}
 @media(max-width:900px){
   .nav-links{display:none;}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(247,248,250,0.99);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 20px;gap:4px;z-index:99;}
@@ -300,10 +300,10 @@ section{padding:100px 48px;}
 .sp-step.active{background:var(--green);width:20px;border-radius:4px;}
 .sp-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--light);letter-spacing:1px;margin-left:4px;}
 .sp-label span{color:var(--green);font-weight:700;}
-.price-wrap{margin-bottom:8px;}
-.price{font-family:'Bebas Neue',sans-serif;font-size:88px;letter-spacing:2px;line-height:1;color:var(--dark);}
+.price-wrap{margin-bottom:8px;text-align:center;}
+.price{font-family:'Bebas Neue',sans-serif;font-size:88px;letter-spacing:2px;line-height:1;color:var(--dark);display:inline-block;}
 .price sup{font-size:36px;vertical-align:super;color:var(--blue);}
-.price-period{font-size:13px;color:var(--light);margin-bottom:36px;letter-spacing:0.5px;}
+.price-period{font-size:13px;color:var(--light);margin-bottom:36px;letter-spacing:0.5px;text-align:center;}
 .pricing-features{list-style:none;display:flex;flex-direction:column;gap:14px;text-align:left;margin-bottom:36px;}
 .pricing-features li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--mid);}
 .pricing-features li::before{content:'✓';color:var(--blue);font-weight:700;width:18px;flex-shrink:0;font-size:16px;}
@@ -702,22 +702,9 @@ footer{background:#064E3B;color:#fff;padding:32px;display:flex;align-items:cente
     <div class="section-label"><span data-en>Pricing</span><span data-es>Precio</span></div>
     <div class="section-title"><span data-en>Simple, Transparent Pricing</span><span data-es>Precios Simples y Transparentes</span></div>
     <p class="section-sub"><span data-en>TradeSync strategies are powered by Collective2. Choose a strategy, connect your brokerage, and every trade executes automatically in your account.</span><span data-es>Las estrategias de TradeSync son impulsadas por Collective2. Elige una estrategia, conecta tu corretaje y cada operación se ejecuta automáticamente en tu cuenta.</span></p>
-    <div class="pricing-toggle">
-      <button class="ptog-btn active" onclick="setPricing('monthly',this)"><span data-en>Monthly</span><span data-es>Mensual</span></button>
-      <button class="ptog-btn" onclick="setPricing('annual',this)"><span data-en>Annual</span><span data-es>Anual</span><span class="ptog-save"><span data-en>SAVE 33%</span><span data-es>AHORRA 33%</span></span></button>
-    </div>
     <div class="pricing-card reveal" id="pricing-card">
-      <div id="price-monthly-block">
-        <div class="price-wrap"><div class="price"><sup>$</sup>20</div></div>
-        <div class="price-period"><span data-en>per month · TradeSync strategy subscription · billed through Collective2</span><span data-es>por mes · suscripción de estrategia · facturado por Collective2</span></div>
-      </div>
-      <div id="price-annual-block" style="display:none;">
-        <div class="price-wrap">
-          <div class="price"><sup>$</sup>17</div>
-          <div style="font-size:13px;color:var(--light);text-decoration:line-through;margin-top:4px;">$49/mo</div>
-        </div>
-        <div class="price-period"><span data-en>per month · billed annually · save ~2 months</span><span data-es>por mes · facturado anual · ahorra ~2 meses</span></div>
-      </div>
+      <div class="price-wrap"><div class="price"><sup>$</sup>20</div></div>
+      <div class="price-period"><span data-en>per month · TradeSync strategy subscription · billed through Collective2</span><span data-es>por mes · suscripción de estrategia · facturado por Collective2</span></div>
       <ul class="pricing-features">
         <li><span data-en>Real-time TradeSync trade signals — automatically executed in your brokerage</span><span data-es>Señales de operación de TradeSync en tiempo real — ejecutadas automáticamente</span></li>
         <li><span data-en>US stocks and options positions included</span><span data-es>Posiciones en acciones y opciones de EE.UU. incluidas</span></li>
@@ -727,7 +714,7 @@ footer{background:#064E3B;color:#fff;padding:32px;display:flex;align-items:cente
         <li><span data-en>Full setup support — contact form on this page</span><span data-es>Soporte completo — formulario de contacto en esta página</span></li>
       </ul>
       <div style="background:var(--green-bg);border:1px solid var(--blue-mid);border-radius:8px;padding:14px 16px;margin-bottom:28px;text-align:left;">
-        <p style="font-size:12px;color:var(--green-dark);line-height:1.6;font-weight:500;"><span data-en>ℹ <strong>Total cost note:</strong> This covers your subscription to your selected TradeSync strategy. Collective2 also charges a separate <strong>Investor AutoTrade Plan from $49/month</strong> (discounted with annual billing) to enable automatic execution. You'll be prompted when setting up AutoTrade.</span><span data-es>ℹ <strong>Nota de costo total:</strong> Esto cubre tu suscripción a la estrategia de TradeSync ($20/mes). Collective2 también cobra un <strong>Plan de Inversor AutoTrade desde $49/mes</strong> (con descuento en facturación anual) para habilitar la ejecución automática.</span></p>
+        <p style="font-size:12px;color:var(--green-dark);line-height:1.6;font-weight:500;"><span data-en>ℹ <strong>Total cost note:</strong> This covers your $20/month TradeSync strategy subscription. Collective2 also charges a separate <strong>Investor AutoTrade Plan of $50/month</strong> to enable automatic execution — bringing your all-in total to <strong>$70/month</strong>.</span><span data-es>ℹ <strong>Nota de costo total:</strong> Esto cubre tu suscripción de $20/mes a la estrategia de TradeSync. Collective2 también cobra un <strong>Plan de Inversor AutoTrade de $50/mes</strong> para habilitar la ejecución automática — llevando tu total a <strong>$70/mes</strong>.</span></p>
       </div>
       <a href="https://collective2.com/details/155893301" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;" id="pricing-cta">
         <span data-en>Start Using TradeSync →</span><span data-es>Empezar a Usar TradeSync →</span>
@@ -781,18 +768,7 @@ footer{background:#064E3B;color:#fff;padding:32px;display:flex;align-items:cente
   </div>
 </section>
  
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <div class="section-label"><span data-en>Subscribers</span><span data-es>Suscriptores</span></div>
-    <div class="section-title"><span data-en>What Subscribers Say</span><span data-es>Lo Que Dicen los Suscriptores</span></div>
-    <div class="testi-grid">
-      <div class="testi-card placeholder reveal"><div style="width:40px;height:1px;background:var(--border);margin:0 auto 16px;"></div><div class="testi-placeholder-text"><span data-en>Subscriber testimonial coming soon.<br/>Be one of the first to join.</span><span data-es>Testimonio próximamente.<br/>Sé uno de los primeros en unirse.</span></div></div>
-      <div class="testi-card placeholder reveal"><div style="width:40px;height:1px;background:var(--border);margin:0 auto 16px;"></div><div class="testi-placeholder-text"><span data-en>Subscriber testimonial coming soon.<br/>Be one of the first to join.</span><span data-es>Testimonio próximamente.<br/>Sé uno de los primeros en unirse.</span></div></div>
-      <div class="testi-card placeholder reveal"><div style="width:40px;height:1px;background:var(--border);margin:0 auto 16px;"></div><div class="testi-placeholder-text"><span data-en>Subscriber testimonial coming soon.<br/>Be one of the first to join.</span><span data-es>Testimonio próximamente.<br/>Sé uno de los primeros en unirse.</span></div></div>
-    </div>
-  </div>
-</section>
+ 
  
  
 <!-- FAQ -->
@@ -1035,4 +1011,3 @@ document.querySelectorAll('.reveal').forEach(el=>{
 </script>
 </body>
 </html>
- 
