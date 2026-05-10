@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
 Disallow: /thankyou.html
-
+ 
+User-agent: facebookexternalhit
+Allow: /
+ 
+User-agent: Twitterbot
+Allow: /
+ 
+User-agent: LinkedInBot
+Allow: /
+ 
+User-agent: WhatsApp
+Allow: /
+ 
 Sitemap: https://tradesync.markets/sitemap.xml
+ 
